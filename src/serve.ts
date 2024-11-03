@@ -44,4 +44,4 @@ App.use((err: Error, req: Request, res: Response, next: NextFunction) => {
 })
 
 //Listando a API na port 3333
-App.listen(process.env.PORT ,() => console.log("\n\n servidor rodando \n\n"));
+App.listen(3333 ,() => console.log("\n\n servidor rodando \n\n"));
