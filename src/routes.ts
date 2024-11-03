@@ -18,12 +18,16 @@ import { SendOrderController } from "./controllers/Order/SendOrderController"
 import { ListOrdersController } from "./controllers/Order/ListOrdersController"
 import { DetailOrderController } from "./controllers/Order/DetailOrderController"
 import { FinishOrderController } from "./controllers/Order/FinishOrderController"
+import { wecomeController } from "./controllers/wecome/wecomeController"
 
 const route = Router()
 
 
 //==PASSANDO PARA MULTER QUE A PASTA QUE SERÁ USADA PARA SALVAR ÁS FOTOS É A TMP NA RAIZ DO PROJETO
 const upload = multer(uploadConfig.upload("./tmp"))
+
+route.get("/", new wecomeController().handle)
+
 //rota de criar usuário
 route.post("/users", new CreateUserController().handle)
 
