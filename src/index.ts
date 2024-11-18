@@ -22,13 +22,6 @@ App.use(
     '/file',
     express.static(path.resolve(__dirname, '..', 'tmp'))
 )
-//proteção da rota
-App.use((req: Request, res: Response, next: NextFunction) => {
-
-    console.log("API CONSUMIDA!!");
-    next();
-});
-
 //tratando errors
 App.use((err: Error, req: Request, res: Response, next: NextFunction) => {
 
